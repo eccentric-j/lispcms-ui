@@ -1,0 +1,8 @@
+node_modules
+.clj-kondo
+.cpcache
+.shadow-cljs
+.nrepl-port
+yarn-error.log
+docs/js/cljs-runtime
+docs/dev
