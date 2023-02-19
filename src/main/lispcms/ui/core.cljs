@@ -15,10 +15,13 @@
 
 (defn app
   [{:keys [token]}]
-  [:div
+  [:div.flex.flex-row.gap-4
    [btn
-    {:on-click #(js/alert "clicked")}
-    "Hello"]])
+    {:on-click #(js/alert "deploy-preview")}
+    "Deploy Preview"]
+   [btn
+    {:on-click #(js/alert "deploy-publish")}
+    "Publish Site"]])
 
 
 (defn ^:dev/after-load -main
