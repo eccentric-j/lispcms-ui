@@ -15,7 +15,7 @@
 
 (defn app
   [{:keys [token]}]
-  [:div.flex.flex-row.gap-4
+  [:div.flex.flex-row.gap-4.gap-5
    [btn
     {:on-click #(js/alert "deploy-preview")}
     "Deploy Preview"]

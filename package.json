@@ -9,7 +9,7 @@
 		"build:css": "postcss ./src/styles.css -o ./docs/css/styles.css",
 		"build:html": "nbb -m lispcms.ui.tasks.html",
 		"dev": "npm run build:html && npx concurrently -n dev: \"npm:dev:*\"",
-		"dev:css": "postcss ./src/styles.css -o ./docs/dev/css/styles.css --watch",
+		"dev:css": "tailwindcss -i ./src/styles.css -o ./docs/dev/css/styles.css --watch",
 		"dev:cljs": "shadow-cljs watch app"
 	},
 	"author": "Jay Zawrotny <jayzawrotny@gmail.com>",
