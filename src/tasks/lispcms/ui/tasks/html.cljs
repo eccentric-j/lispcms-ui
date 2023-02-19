@@ -15,11 +15,11 @@
       "LispCMS Admin UI"]
      [:link
       {:rel "stylesheet"
-       :href "/css/styles.css"}]]
+       :href "./css/styles.css"}]]
     [:body.notion
      [:main#root]
      [:script
-      {:src "/js/lispcms-ui.js"}]]]))
+      {:src "./js/lispcms-ui.js"}]]]))
 
 (defn -main
   [& args]

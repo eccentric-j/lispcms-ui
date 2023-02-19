@@ -14,7 +14,7 @@
    label])
 
 (defn app
-  []
+  [{:keys [token]}]
   [:div
    [btn
     {:on-click #(js/alert "clicked")}
@@ -23,6 +23,8 @@
 
 (defn ^:dev/after-load -main
   [& args]
-  (rdomc/render root [app]))
+  (let [params (js/URLSearchParams. js/window.location.search)
+        token (.get params "token")]
+   (rdomc/render root [app {:token token}])))
 
 
