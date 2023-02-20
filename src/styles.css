@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	body {
+		@apply text-sm;
+	}
+}
+
 @layer components {
 	.notion {
 		@apply bg-notion-light dark:bg-notion-dark;
@@ -15,8 +21,11 @@
 				active:bg-gradient-to-b active:from-blue-600 active:to-blue-500
 				border border-black;
 	}
+	.btn-primary[disabled] {
+		@apply bg-gradient-to-b from-gray-500 to-gray-600 border border-black cursor-not-allowed;
+	}
 	.btn {
-		@apply text-white rounded px-4 py-1 shadow w-full block sm:w-auto shadow-inner;
+		@apply text-white rounded px-4 py-1 shadow w-full block sm:w-auto shadow-inner tracking-wide;
 	}
 	.dropdown-btn {
 		@apply btn btn-primary flex-grow-0 rounded-l-none border-r-0 border-t-0

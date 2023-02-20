@@ -25,7 +25,7 @@
   [& args]
   (let [env js/process.env.NODE_ENV
         is-prod (= env "production")]
-    (.writeFile fs (if is-prod "docs/index.html" "docs/dev/index.html")
+    (.writeFile fs (if is-prod "docs/lispcms-ui/index.html" "docs/dev/index.html")
       (str
         "<!doctype html>\n"
         (render-to-static-markup [root])))))

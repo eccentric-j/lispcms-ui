@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "NODE_ENV=production concurrently -n build: \"npm:build:*\"",
 		"build:cljs": "shadow-cljs release app",
-		"build:css": "postcss ./src/styles.css -o ./docs/css/styles.css",
+		"build:css": "postcss ./src/styles.css -o ./docs/lispcms-ui/css/styles.css",
 		"build:html": "nbb -m lispcms.ui.tasks.html",
 		"dev": "npm run build:html && npx concurrently -n dev: \"npm:dev:*\"",
 		"dev:css": "tailwindcss -i ./src/styles.css -o ./docs/dev/css/styles.css --watch",
@@ -15,10 +15,12 @@
 	"author": "Jay Zawrotny <jayzawrotny@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
+		"@heroicons/react": "^2.0.16",
 		"@tailwindcss/forms": "^0.5.3",
 		"autoprefixer": "^10.4.13",
 		"concurrently": "^7.6.0",
 		"nbb": "^1.2.163",
+		"netlify": "^13.1.2",
 		"octokit": "^2.0.14",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",
