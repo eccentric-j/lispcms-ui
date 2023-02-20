@@ -87,6 +87,9 @@
     :disabled disabled}
    label])
 
+;; @TODO Fetch both github deploy actions and netlify and resolve both into
+;; state
+
 (defn app
   []
   (pprint @state)
